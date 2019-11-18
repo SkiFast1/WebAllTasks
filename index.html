@@ -1,70 +1,91 @@
 <!DOCTYPE html>
-<HTML>
-<!-- комментарии -->
-<HEAD>
+<html>
+<!-- 15px - внешнее и внутреннее, серая подложка -->
+<head>
 <meta charset="utf-8">	
-<title>Стили</title>
-<link rel="stylesheet"
-type="text/css"	href="style.css"/>
-<TITLE>Hey bitches</TITLE>
-<LINK REL="stylesheet" TYPE="text/css" href="style.css">
-
-<STYLE> </STYLE>
-<SCRIPT> </SCRIPT>
-</HEAD>
-<BODY BACKGROUND="images/bricks.jpg"
-BGCOLOR="#202020" TEXT="#FFFFFF"
-LINK="#FF0000"VLINK="#505050"
-MARGINHEIGHT="30" TOPMARGIN="30"
-LEFTMARGIN="40" MARGINWIDTH="40">
-<h2>
-Текст документа</h2>
-<A HREF="http://ifmo.ru">Ссылка</A><BR>
-<A HREF="http://ifmo.ru" TARGET="_blank">Ссылка откроется
-вновом окне</A>
-<A HREF="mailto:grzzzn@igf.ru?subject=Приглашение
-&cc=bg@microsoft.com&body=Приезжай на вечеринку."><BR>
-Откроется почтовый клиент</A><BR>
-
-<img src="norm.jpg" alt="Manifesto" /><BR>
-<TABLE BORDER="1" BORDER="70%" CELLPADDING="10" CELLSPACING="10" BGCOLOR="RED" style="table">
- <TR>
-    <TD ROWSPAN="2" COLSPAN="2">1</TD>
-    <TD COLSPAN="2">2</TD>
- </TR>
- <TR>
-    <TD>1</TD>
-    <TD>2</TD>
- </TR>
-    <TD ROWSPAN="2">6</TD>
-    <TD COLSPAN="3">7</TD>
- </TR>
- <TR>
-    <TD>3</TD>
-    <TD>4</TD>
-    <TD>5</TD>
- </TR>
-</TABLE>
-<INPUT TYPE="text" name="name" SIZE="20" VALUE="Name"><BR>
-<INPUT TYPE="text" name="lastname" SIZE="20" VALUE="Last name"><BR>
-<TEXTAREA NAME="address" WRAP="virtual" COLS="8" ROWS="2">Postal code</TEXTAREA><BR>
-<SELECT NAME="City">
- <OPTION VALUE="Tokyo" SELECTED>Tokyo</OPTION>
- <OPTION VALUE="London">London</OPTION>
- <OPTION VALUE="New York" >New York</OPTION>
- <OPTION VALUE="Berlin">Berlin</OPTION>
-</SELECT>
-<INPUT TYPE="hidden" NAME="info" VALUE="XSS ALERT!!!"><BR>
-<A>Notificate?</A><BR>
-<INPUT TYPE="radio" NAME="agr" VALUE="Yes" CHECKED> Yes<BR>
-<INPUT TYPE="text" name="EMAIL" SIZE="20" VALUE="EMAIL"> Your Email<br>
-<INPUT TYPE="radio" NAME="agr" VALUE="No"> No<BR>
-<INPUT TYPE="password" WIDTH="10" NAME="passwd"> Password<BR>
-
-<INPUT TYPE="checkbox" NAME="todo1"> Send me documents <BR>
-<INPUT TYPE="checkbox" NAME="todo2"> Send me tickets <BR>
-<INPUT TYPE="submit" VALUE="Send">
-</FORM>
-</BODY>
-</HTML> 
- 
+<title>Формы</title>
+<style>
+    div{
+    height:150px;
+    background-color: gray;
+    padding: 15px;
+    border: 4px solid black;
+    }
+    input[type="text"]{
+    border: 4px dashed black;
+    background-color: lightgreen;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 120%;
+    }
+    input[type="password"]{
+    }
+    a{
+    font-family: "Arial";
+    font-size: 120%;
+    }
+    img {
+    width: 300px;
+    height: 300px;
+    }
+    option{
+    font-family: "Arial";
+    font-size: 120%;
+    }
+    #Russia{
+    font-weight: bold;
+    }
+    .droplist{
+    background-color: red;
+    font-size: 14px;
+    padding-left: 10px;
+    margin: 10px;
+    }
+    .second{
+    height: 350px;
+    }
+    img{
+    float: left;
+    padding: 10px;
+    }
+    .Res{
+    margin: 10px;
+    }
+    sp:link{ color:blue;text-decoration:none}
+    sp:visited{color:pink;text-decoration:none}
+    sp:hover{color:red;text-decoration:underline}
+    sp:active{color:yellow;text-decoration:underline}
+    #save{
+    margin: 10px;
+    position: absolute;
+    bottom: 330px;
+    left: 25px;
+    }
+</style>
+</head>
+<body>
+<div>
+    <form id="main">
+    <a>Sign In:</a><br>
+        <a>Имя:</a>
+        <input type="text" name="Login" size="20"><br><br>
+        <a>Пароль:</a>
+        <input type="password" width="10" name="pass"><br>
+        <input type="submit" value="Отправить">
+    </form>
+</div><br>
+<div class='second'>
+    <form id=2>
+    <img src="norm.jpg" alt="Manifesto" />
+    <select class="droplist" name="Страна">Выберите страну
+        <option id="Japan" value="Япония">Япония</OPTION>
+        <option id="China" value="Китай">Китай</option>
+        <option id="Russia" value="Россия" selected>Россия</option>
+        <option id="USA" value="США">США</option>
+    </select><br>
+    <input class="Res" type="checkbox"><sp>Я - резидент этой страны</sp></input>
+    </form>
+<input id="save" type="submit" value="Сохранить">
+</div>
+</body>
+</html> 
