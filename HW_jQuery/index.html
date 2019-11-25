@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<!-- 15px - внешнее и внутреннее, серая подложка -->
+<head>
+<meta charset="utf-8">
+<title>Формы</title>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="script.js"></script>
+</head>
+<body>
+<h1 id="el1">HELLO</h1>
+<p id="pl">SUUUUP!</p>
+<form id="1">
+    <button id="button1" type="button" onclick="disa()">Click Me!</button>
+    <button id="button2" type="button" onclick="disa()">Click Me!</button>
+    <button id="button3" type="button" onclick="disa()">Click Me!</button>
+</form>
+<!--<img id="pic1" src="norm.jpg"/>-->
+<a href="/delete" onclick="return confirm('Sure?');">Delete</a>
+<a id="ya" href="http://yandex.com" target="_self">Yandex</a>
+<a id="go" href="http://google.com" target="_self">Google</a>
+<input id="lb1" type="button" onclick="">
+<div id="func">
+		<form id='form'>
+			<input type='submit' value="Load" onclick='createTable()'>
+		</form>
+	</div>
+<div id="func2">
+    <input type="button" id="btt11" value="reload" onclick="reload()">
+    <div id="pg">Replace</div>
+</div>
+<div id="func3">
+    <input type="button" id="btt12" value="JSON" onclick="PJson()">
+    <div id="jsonWrap"></div>
+</div>
+<div id="tab"></div>
+</body>
+</html>
