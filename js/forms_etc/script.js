@@ -69,16 +69,7 @@ for (i = 0; i < document.links.length; i++)
 if (refnames.includes(document.getElementsByTagName('a')[i].innerHTML) != 1 && (document.getElementsByTagName('a')[i].innerHTML != 'New_Anchor_Again'))
     refnames.push(document.getElementsByTagName('a')[i].innerHTML);
 }
-/*
-let k = 0;
-for(i=0; i<document.links.length; i++){
-  if(document.getElementsByTagName('a')[i].innerHTML != "General"){
-  refnames=refnames+document.getElementsByTagName('a')[i].innerHTML+', ';
-} else if(k == 0){
-refnames=refnames+document.getElementsByTagName('a')[i].innerHTML+', ';
-k+=1;}
-}
-*/
+
 document.write(' <table border=1, cellpadding=2, cellspacing=0, width="90%">');
 for (i = 0; i <= 0; i++){
     document.write("<tr>");
